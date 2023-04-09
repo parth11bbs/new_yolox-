@@ -105,7 +105,7 @@ def draw_boxes(img, bbox, object_id, identities=None, offset=(0, 0)):
         UI_box(box, img, label=label + str(id), color=color,
                line_thickness=3, boundingbox=True)
 
-        if len(data_deque[id] >= 2):
+        if len(data_deque[id]) >= 2:
             update_counter(centerpoints=data_deque[id], obj_name=obj_name)
 
     return img
