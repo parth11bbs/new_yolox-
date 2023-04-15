@@ -44,7 +44,7 @@ object_counter = {
 def estimateSpeed(location1, location2):
     height = location1[0] - location2[0]
     width = location1[1] - location2[1]
-    distance_in_pixels = math.sqrt(math.pow(height, 2), math.pow(width, 2))
+    distance_in_pixels = math.sqrt(math.pow(height, 2) + math.pow(width, 2))
 
     # how many pixels does it take to measure one meter (hyperparameter - needs tuning)
     pixels_per_meter = 15
